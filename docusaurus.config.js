@@ -3,8 +3,8 @@ module.exports = {
 	tagline: "A free, feature-rich Discord-to-Roblox bot.",
 	url: "https://romanager.bot",
 	baseUrl: "/",
-	onBrokenLinks: "error",
-	onBrokenMarkdownLinks: "error",
+	onBrokenLinks: "throw",
+	onBrokenMarkdownLinks: "throw",
 	favicon: "https://i.jaydensar.net/rmt-min.png",
 	organizationName: "RoManager-org", // Usually your GitHub org/user name.
 	projectName: "website", // Usually your repo name.
@@ -46,7 +46,7 @@ module.exports = {
 			],
 		},
 		footer: {
-			copyright: `Copyright © ${new Date().getFullYear()} RoManager`,
+			copyright: `Copyright © ${new Date().getFullYear()} RoManager, LLC.`,
 		},
 	},
 	themes: [
@@ -81,10 +81,8 @@ module.exports = {
 	],
 	scripts: [
 		{
-			src: "https://science.jaydensar.net/science.js",
-			async: true,
-			defer: true,
-			"data-website-id": "3d11690f-43db-47de-a895-d81345623235",
+			src: "/_vercel/insights/script.js",
 		},
 	],
+	clientModules: [require.resolve("./src/profiles.js")],
 };

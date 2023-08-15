@@ -7,7 +7,7 @@ RoManager's website. Built with [Docusaurus 2](https://v2.docusaurus.io/).
 ## Installation
 
 ```
-npm install
+yarn install
 ```
 
 Installs all dependancies.
@@ -15,7 +15,7 @@ Installs all dependancies.
 ## Local Development
 
 ```
-npm start
+yarn start
 ```
 
 Starts a local development server.

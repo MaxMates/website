@@ -17,15 +17,10 @@ Base URL: `https://api.romanager.bot/v1`
 
 ## Generating an API key
 
-To generate an API key, run the `.api-key generate` command. You must be the group owner to run this command. A DM will be sent to you with the API key.
+To generate an API key, run the `/api-key generate` command. You must be the group owner to run this command. A DM will be sent to you with the API key.
 
 <DiscordMessages>
-	<DiscordMessage
-		author="RoManager"
-		verified={true}
-		bot={true}
-		avatar="https://cdn.discordapp.com/avatars/738035113815834746/9c943bdaadc550fc4d7af38c6d2bc8ba.png"
-	>
+	<DiscordMessage profile="RoManager">
 		API key successfully generated:
 		<br />
 		<code class="discord-codeblock">7885a186-86c6-48c9-8f89-82ad646e8e98</code>
@@ -39,6 +34,8 @@ All API methods are below, in the other categories. The API expects JSON data in
 ### Ratelimit
 
 The ratelimit is 60 requests per 60 seconds. For example, you can send 60 requests in 5 seconds, however you will not be able to send any more requests for 55 seconds.
+
+Note: the ratelimit does not apply to the Discord roles endpoint.
 
 The following headers will be set so you know when you should retry your request:
 
